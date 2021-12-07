@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE-edge">
+        <meta name="author" content="Alvin Rahmatilasyah 2172016">
+        <title>index</title>
+        <style>
+            td {
+                background-color: grey;
+                border: 1px solid black;
+                width: auto;
+                height: auto;
+                text-align: center;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <table cellspacing= "0" cellpadding= "0"> 
+            <script>
+                let nama= [] ;
+                let warna= [] ;
+                let inputnama= [] ;
+                let inputwarna= [] ;
+                
+                while (true) {
+                    inputnama= prompt("Masukkan nama: ") ;
+                    if (inputnama != "stop") {
+                        inputwarna= prompt ("Masukkan warna kesukaan (english): ") ;
+                        nama.push(inputnama) ;
+                        warna.push(inputwarna) ;
+                    }
+                    else {
+                        inputcari= prompt ("Masukkan warna yang ingin dicari: ") ;
+                        break ;
+                        
+                    }
+                }
+                
+                document.write("<tr>") ;
+                document.write("<td>"+ " Nama" + "</td>") ;
+                document.write("<td>"+ " Warna Kesukaan" + "</td>") ;
+                document.write("</tr>") ;
+
+                for (i=0; i<nama.length ; i++) {
+                    document.write("<tr>") ;
+                    document.write("<td style='background-color:" + warna[i] +";'>"+ nama[i] + "</td>" + "<td style='background-color:" + warna[i] +";'>"+ warna[i] + "</td> ") ;
+                    document.write("</tr>") ;
+                }
+            </script>
+        </table>
+        <script>
+                let jumlahnama= 0 ;
+                let namasuka= [ ] ;
+
+                for (n=0 ; n<nama.length ; n++) {
+                   if (warna[n] == inputcari){
+                        jumlahnama++ ;
+                        namasuka.push(nama[n]) ;
+                        document.write("<br>") ;
+                        
+                    }
+                    if ((jumlahnama==0) && (n==(nama.length-1))) {
+                        jumlahnama++ ;
+                        document.write("<br>") ;
+                        document.write("Tidak ada yang menyukai warna tersebut.") ;
+                    }
+                }
+                if (jumlahnama !=1) {
+                    document.write(" Ada " + jumlahnama + " orang yang menyukai warna " + inputcari + " yaitu " + namasuka.join(" ")) ;
+                }
+        </script>    
+    </body>
+</html> 
+               

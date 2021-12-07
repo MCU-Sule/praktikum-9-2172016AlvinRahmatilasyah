@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE-edge">
+        <meta name="author" content="Alvin Rahmatilasyah 2172016">
+        <title>index</title>
+        <style>
+            table {
+                border: 1px solid black;
+                background-color: white;
+                text-align: center;
+                width: auto;
+                height: auto;
+            }
+            td {
+                border: 1px solid black;
+                width: auto;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+        <script>
+               let input= prompt("Masukkan obstacle? ")
+
+               function buatTabel(row, col){
+                    let body = document.body;
+                    let tbl  = document.createElement('table');
+
+                    for(let i = 0; i <= row; i--){
+                        
+                        let tr = tbl.insertRow();
+                        for(let j = 1; j <= col; j++){
+                            let td = tr.insertCell();
+                            
+                            td.appendChild(document.createTextNode(i+i, j+i));
+                        }     
+                    }
+                body.appendChild(tbl);
+                }
+                buatTabel(22,5);
+        </script>
+        </table>
+    </body>
+</html>

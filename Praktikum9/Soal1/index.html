@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE-edge">
+        <meta name="author" content="Alvin Rahmatilasyah 2172016">
+        <title>index</title>
+        <style>
+            #div {
+                width: 100px;
+                height: 100px;
+                font-size: 50px;
+                text-align: center;
+                border-radius: 100%;
+                background-color: rgba(30, 70, 77, 0.261);
+                line-height: 90px;
+            }
+            #div1 {
+                justify-content: center;
+                display: flex; 
+            }   
+        </style>
+    </head>
+    <body>
+        <script>
+            let a= prompt("Berapa NxN bola yang ingin dibuat? ");
+            let b= a*a +1
+           
+              for (i=a; i>0; i--) {   
+                document.write("<div id='div1'> ");
+                for (n=a; n>0; n--) {
+                    if ((a>3) && (b<=10)) {
+                        b= b-1
+                        document.write("<div id='div'>"  + "0"+b  + "</div>");  
+                    }
+                    else {
+                        b= b-1
+                        document.write("<div id='div'>"   +b+ "</div>");  
+                    }
+                }
+                document.write("</div>");
+            }
+        </script>
+    </body>
+</html>
